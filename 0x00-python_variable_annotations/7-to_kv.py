@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
 """
-This is a module that provides a function for summing list values.
+This is a module that provides a function for creating a tuple with a string
+    and the square of an int or float as a float.
 """
-from typing import Union, List
+from typing import Union, Tuple
 
 
-def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """
-    This function computes the sum of a list of integers and floats, and
-        returns the result as a float.
+    This function takes a string and an int or float, and returns a tuple with
+        the string and the square of the int or float as a float.
 
     Parameters:
-    mxd_lst (List[Union[int, float]]): The list of integers and floats to sum.
+    k (str): The string to include in the tuple.
+    v (Union[int, float]): The int or float to square.
 
     Returns:
-    float: The sum of the elements in mxd_lst.
+    Tuple[str, float]: A tuple with the string k and the square of v as a
+        float.
     """
-    return sum(mxd_lst)
+    return (k, float(v ** 2))
